@@ -100,9 +100,14 @@ Below are provided the steps that were followed for this project. Each step and 
     - Automatic, no tuning
 
 #### Conclusion:
-
+   - For the same 6 Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
+   - DBSCAN proposes                  : "1 cluister" and "Silhouette Coefficient": 0.205"
+   - SpectralClustering proposes      : "2 cluisters" and "Silhouette Coefficient": 0.39"
+   - AgglomerativeClustering proposes : "2 cluisters" and "Silhouette Coefficient": 0.728"
+   - KMeans proposes                  : "4 cluisters" and "Silhouette Coefficient": 0.50" (Elbow: k=4, inertia=150)
+   - In the case of our exercise (bearing), I preferre model "KMeans" because we can controle the cost_function_Inertia and "Silhouette Coefficient" with the "tuning"
+   - If we can automate the procedure to select the best "couple features", the score will be higher.
   
-
 ### Folder structures
 * Contains all of the jupyter's notebooks including classifiers, preprocessing and data visualization
   | File                     | Description                                                                 |
