@@ -25,15 +25,9 @@ The bearings were mounted on the shaft as shown in Figure 1.
 ### Method
 Below are provided the steps that were followed for this project. Each step and classifiers have their own document.
 
- 1. Data visualization: ploting data to detect missing values, outliers, data relations and usefulness of features
+ 1. Data visualization: ploting data to detect data relations and usefulness of features
 
-
-
-![](plot/acceleration_x.png)
-![](plot/acceleration_y.png)
-![](plot/acceleration_z.png)
-![](plot/time_distribution.png)
-
+![](plot/Heatmap_01.png)
 
  2. Preprocessing: with the knowledge acquired with the preceding step, apply preprocessing of data including dealing with missing values, drop unuseful features and build new features
          - Feature selection: 5 new representative features (i.e. min, max, median, std, mean) derived from the orginal features (timestamp, a1_x, a2_x, a1_y, a2_y, a1_z, a2_z, hz, w). We have 45 features.
@@ -50,14 +44,7 @@ Below are provided the steps that were followed for this project. Each step and 
      
  3. Clustering: build clustering based on the preprocessed data using a variety of techniques
 
-### Classification techniques with the "silhouette_coeff"
-- gathering of **features** (5+) of your **failed** bearing dataset
-- kmeans clustering of at least two **features** of the **failed** bearings
-- visualization of said clustering
-- evaluation of the **silhouette** score of your clustering method
-- extension (one-by-one) to 6 features. (how does the silhouette score evolve?)
-- vizualizations of your model evaluation
-
+### Classification techniques with the "inertia" and "silhouette_coeff":
 - KMeans: tested 2 **failed** features:
     ° (I do hier in manuel but it could be automated )  
     
@@ -73,16 +60,20 @@ Below are provided the steps that were followed for this project. Each step and 
   |'a2_ymedian', 'a2_ystd'|	k=2	|0.48 |
   |'a2_ymean', 'a2_ystd'|	k=2	|0.78 |
   
-  ![](plot/KNN_validation.png)
+  ![](plot/a1_a2_ymax_2.png) ![](plot/a1_a2_ymax_3.png)
+  ![](plot/a1_a2_ymax_inertia.png)
   
   - KMeans: tested from 3 to 6 **failed** features:
-    ° Based on the result of 2 **failed** features, I am going to extend to 3,4,5 and 6 **failed** features.
-    ° Hier is somes best plot results:
-    
-     ![](plot/Knn_plot.png)
-     ![](plot/Knn_plot.png)
-     ![](plot/Knn_plot.png)
-     ![](plot/Knn_plot.png)
+    * Based on the result of 2 **failed** features, I am going to extend to 3,4,5 and 6 **failed** features.
+    * Hier is somes best plot results:
+     * "3 failed" features:
+       ![](plot/a1_xmax_ymax_zmax_3_inertia.png)
+     * "4 failed" features:
+       ![](plot/a1_xmax_ymax_xstd_a2_ymax_4_inertia.png)
+     * "5 failed" features:
+       ![](plot/a1_ymean_ymax_xstd_a2_ymax_ymean_wstd_5_inertia.png)
+     * "6 failed" features:
+       ![](plot/a1_ymean_ymax_a2_y_mean_ymax_wstd_wmedian_6_inertia.png)
                
     ° After with the best result of 6 **failed** features, I am going to test with another models:DBSCAN, SpectralClustering and AgglomerativeClustering
   
@@ -101,7 +92,7 @@ Below are provided the steps that were followed for this project. Each step and 
     - Estimated number of noise points: 0
     - Silhouette Coefficient: 0.390
 
-   ![](plot/Knn_plot.png)
+   ![](plot/SpectralClustering_01.png)
 
   #### AgglomerativeClustering:
 
