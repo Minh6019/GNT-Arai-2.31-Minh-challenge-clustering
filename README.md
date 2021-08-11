@@ -63,13 +63,13 @@ Below are provided the steps that were followed for this project. Each step and 
     * Based on the result of 2 **failed** features, I am going to extend to 3,4,5 and 6 **failed** features.
     * Hier is somes best plot results:
      * Ex: "3 failed" features:
-      ![](plot/a1_xmax_ymax_zmax_3_inertia.png)  
+     *![](plot/a1_xmax_ymax_zmax_3_inertia.png)  
      * Ex: "4 failed" features:
-      ![](plot/a1_xmax_ymax_xstd_a2_ymax_4_inertia.png)
+     *![](plot/a1_xmax_ymax_xstd_a2_ymax_4_inertia.png)
      * Ex: "5 failed" features:
-      ![](plot/a1_ymean_ymax_xstd_a2_ymax_ymean_wstd_5_inertia.png)
+     *![](plot/a1_ymean_ymax_xstd_a2_ymax_ymean_wstd_5_inertia.png)
      * Ex: "6 failed" features:
-      ![](plot/a1_ymean_ymax_a2_y_mean_ymax_wstd_wmedian_6_inertia.png)
+     *![](plot/a1_ymean_ymax_a2_y_mean_ymax_wstd_wmedian_6_inertia.png)
                
    3. After with the best result of 6 **failed** features, I am going to test with another models:DBSCAN, SpectralClustering and AgglomerativeClustering
      * Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
