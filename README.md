@@ -75,12 +75,15 @@ Below are provided the steps that were followed for this project. Each step and 
        ![](plot/a1_ymean_ymax_a2_y_mean_ymax_wstd_wmedian_6_inertia.png)
                
    3. After with the best result of 6 **failed** features, I am going to test with another models:DBSCAN, SpectralClustering and AgglomerativeClustering
+     * Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
+     
   
   #### DBSCAN:
     - Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
     - Estimated number of clusters: 1
     - Estimated number of noise points: 74
     - Silhouette Coefficient: 0.205
+    - Automatic, no tuning
        
   #### SpectralClustering:
 
@@ -97,6 +100,7 @@ Below are provided the steps that were followed for this project. Each step and 
     - Estimated number of clusters: 2
     - Estimated number of noise points: 0
     - Silhouette Coefficient: 0.728
+    - Automatic, no tuning
 
 #### Conclusion:
 
