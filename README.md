@@ -29,8 +29,8 @@ Below are provided the steps that were followed for this project. Each step and 
 ![](plot/Heatmap_01.png)
 
  2. Preprocessing: with the knowledge acquired with the preceding step, apply preprocessing of data including dealing with missing values, drop unuseful features and build new features
- 3. Feature selection: 5 new representative features (i.e. min, max, median, std, mean) derived from the orginal features (timestamp, a1_x, a2_x, a1_y, a2_y, a1_z, a2_z, hz, w). We have 45 features.
- 4. I create the following features:'timestampmin', 'timestampmax', 'timestampmean', 'timestampstd',
+ 4. Feature selection: 5 new representative features (i.e. min, max, median, std, mean) derived from the orginal features (timestamp, a1_x, a2_x, a1_y, a2_y, a1_z, a2_z, hz, w). We have 45 features.
+ 5. I create the following features:'timestampmin', 'timestampmax', 'timestampmean', 'timestampstd',
          'timestampmedian', 'a1_xmin', 'a1_xmax', 'a1_xmean', 'a1_xstd',
          'a1_xmedian', 'a1_ymin', 'a1_ymax', 'a1_ymean', 'a1_ystd', 'a1_ymedian',
          'a1_zmin', 'a1_zmax', 'a1_zmean', 'a1_zstd', 'a1_zmedian', 'a2_xmin',
@@ -77,12 +77,11 @@ Below are provided the steps that were followed for this project. Each step and 
    3. After with the best result of 6 **failed** features, I am going to test with another models:DBSCAN, SpectralClustering and AgglomerativeClustering
   
   #### DBSCAN:
-    * Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
-    * Estimated number of clusters: 1
-    * Estimated number of noise points: 74
-    * Silhouette Coefficient: 0.205
-      ![](plot/Knn_plot.png)
-   
+    - Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
+    - Estimated number of clusters: 1
+    - Estimated number of noise points: 74
+    - Silhouette Coefficient: 0.205
+       
   #### SpectralClustering:
 
     - Features: 'a1_ymean', 'a1_ymax', 'a2_ymax', 'a2_ymean', 'wstd', 'wmedian'
@@ -98,8 +97,6 @@ Below are provided the steps that were followed for this project. Each step and 
     - Estimated number of clusters: 2
     - Estimated number of noise points: 0
     - Silhouette Coefficient: 0.728
-
-   ![](plot/Knn_plot.png)
 
 #### Conclusion:
 
