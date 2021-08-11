@@ -30,8 +30,8 @@ Below are provided the steps that were followed for this project. Each step and 
 ![](plot/Heatmap_01.png)
 
  2. Preprocessing: with the knowledge acquired with the preceding step, apply preprocessing of data including dealing with missing values, drop unuseful features and build new features
-         - Feature selection: 5 new representative features (i.e. min, max, median, std, mean) derived from the orginal features (timestamp, a1_x, a2_x, a1_y, a2_y, a1_z, a2_z, hz, w). We have 45 features.
-         - I create following features:'timestampmin', 'timestampmax', 'timestampmean', 'timestampstd',
+ 3. Feature selection: 5 new representative features (i.e. min, max, median, std, mean) derived from the orginal features (timestamp, a1_x, a2_x, a1_y, a2_y, a1_z, a2_z, hz, w). We have 45 features.
+ 4. I create following features:'timestampmin', 'timestampmax', 'timestampmean', 'timestampstd',
          'timestampmedian', 'a1_xmin', 'a1_xmax', 'a1_xmean', 'a1_xstd',
          'a1_xmedian', 'a1_ymin', 'a1_ymax', 'a1_ymean', 'a1_ystd', 'a1_ymedian',
          'a1_zmin', 'a1_zmax', 'a1_zmean', 'a1_zstd', 'a1_zmedian', 'a2_xmin',
@@ -39,10 +39,8 @@ Below are provided the steps that were followed for this project. Each step and 
          'a2_ymean', 'a2_ystd', 'a2_ymedian', 'a2_zmin', 'a2_zmax', 'a2_zmean',
          'a2_zstd', 'a2_zmedian', 'hzmin', 'hzmax', 'hzmean', 'hzstd',
          'hzmedian', 'wmin', 'wmax', 'wmean', 'wstd', 'wmedian', 'status'
-         
-         - This preprocessing is finished and is ready for clustering.
-     
- 3. Clustering: build clustering based on the preprocessed data using a variety of techniques
+  5. This preprocessing is finished and is ready for clustering.
+  6. Clustering: build clustering based on the preprocessed data using a variety of techniques
 
 ### Classification techniques with the "inertia" and "silhouette_coeff":
 - KMeans: tested 2 **failed** features:
