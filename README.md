@@ -7,7 +7,7 @@ Our mission is to make an automated bearing testing system and to create a model
 The goal is to find the more convenient algorithm to make some predictions about this system. 
 
 ### Content
-![](https://i.postimg.cc/gkgJGTnj/1.jpg)
+<img src = "https://i.postimg.cc/gkgJGTnj/1.jpg" width = "500" height = "300">
  - For the experiments device shown on the picture was constructed. Two bearings were installed on the shaft. The rotation speed changed from 0 to 1500 rpm, was held for 10 seconds, and decreased to 250 rpm. 
  - The shaft was rotated using an DC motor connected to the shaft through a coupling. A radial load of 3.5 kg is applied to the shaft using a balanced weight.
 The bearings were mounted on the shaft as shown in Figure 1. 
